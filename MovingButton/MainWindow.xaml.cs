@@ -24,10 +24,13 @@ namespace MovingButton
         {
             InitializeComponent();
         }
-
-        private void Button_MouseMove(object sender, MouseEventArgs e)
+        private void PressMeButtonPreviewMouseMove(object sender, MouseEventArgs e)
         {
-
+            var random = new Random();
+            var transform = new TranslateTransform();
+            transform.X = random.Next((int) Mouse.GetPosition(grid).X);
+            transform.Y = random.Next((int) Mouse.GetPosition(grid).Y);
+            pressMeButton.RenderTransform = transform;
         }
     }
 }

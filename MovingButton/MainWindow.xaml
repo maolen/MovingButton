@@ -6,8 +6,15 @@
         xmlns:local="clr-namespace:MovingButton"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Нажми меня" HorizontalAlignment="Left" Margin="323,171,0,0" VerticalAlignment="Top" MouseMove="Button_MouseMove"/>
+    <Grid Name="grid">
+        <Button x:Name="pressMeButton" 
+                Content="Нажми меня" 
+                HorizontalAlignment="Left" 
+                Margin="323,171,0,0" 
+                VerticalAlignment="Top" 
+                Height="20"
+                Width="80"
+                PreviewMouseMove="PressMeButtonPreviewMouseMove"/>
 
     </Grid>
 </Window>
